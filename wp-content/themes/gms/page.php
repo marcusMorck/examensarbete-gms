@@ -6,25 +6,30 @@ get_header(); ?>
 <?php
 
     //while ( have_posts() ) : the_post();
-
-   echo "hi";
-        $prod_cat_args = array(
-            'taxonomy'     => 'product_cat', //woocommerce
-            'orderby'      => 'name',
-            'empty'        => 0
+    //endwhile;
+        $orderby = 'name';
+        $order = 'asc';
+        $hide_empty = false ;
+        $cat_args = array(
+            'orderby'    => $orderby,
+            'order'      => $order,
+            'hide_empty' => $hide_empty,
         );
 
-        $woo_categories = get_categories( $prod_cat_args );
+        $product_categories = get_terms( 'product_cat', $cat_args );
 
-        foreach ( $woo_categories as $woo_cat ) {
-            $woo_cat_id = $woo_cat->term_id; //category ID
-            $woo_cat_name = $woo_cat->name; //category name
-            $woo_cat_slug = $woo_cat->slug; //category slug
+        if( !empty($product_categories) ){
 
-            echo 'prodname' . $woo_cat_name;
-            // $return .= '<a href="' . get_term_link( $woo_cat_slug, 'product_cat' ) . '">' . $woo_cat_name . '</a>';
+
+            foreach ($product_categories as $key => $category) {
+                echo $category->name;
+
+
+            }
         }
-    //endwhile;
+
+        wc_get_template( 'single-product/title.php' );
+
 ?>
 </main>
 
