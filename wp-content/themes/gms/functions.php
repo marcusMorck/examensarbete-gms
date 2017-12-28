@@ -4,7 +4,6 @@
 function woocommerce_support(){
     add_theme_support('woocommerce');
 }
-
 add_action('after_setup_theme', 'woocommerce_support');
 
 
@@ -25,3 +24,16 @@ function load_scripts()
 }
 //Executes the function load_scripts() and adds all of the scripts
 add_action('wp_enqueue_scripts', 'load_scripts');
+
+
+function gms_custom_logo_setup() {
+    $defaults = array(
+        'height'      => 500,
+        'width'       => 500,
+        'flex-height' => true,
+        'flex-width'  => true,
+        'header-text' => array( 'site-title', 'site-description' ),
+    );
+    add_theme_support( 'custom-logo', $defaults );
+}
+add_action('after_setup_theme', 'gms_custom_logo_setup');
