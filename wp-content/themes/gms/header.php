@@ -7,7 +7,7 @@
     <body>
     <div class="wrapper">
         <header>
-            <div class="content">
+            <div class="header-content">
                 <div class="logo">
                     <?php
                         if ( function_exists( 'the_custom_logo' ) ) {
