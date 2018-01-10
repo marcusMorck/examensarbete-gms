@@ -25,7 +25,7 @@ function load_scripts()
 //Executes the function load_scripts() and adds all of the scripts
 add_action('wp_enqueue_scripts', 'load_scripts');
 
-
+//Function that sets default values for custom logo and adds the functionality in wordpress
 function gms_custom_logo_setup() {
     $defaults = array(
         'height'      => 500,
@@ -36,4 +36,16 @@ function gms_custom_logo_setup() {
     );
     add_theme_support( 'custom-logo', $defaults );
 }
+//Executes the function gms_custom_logo_setup()
 add_action('after_setup_theme', 'gms_custom_logo_setup');
+
+//Function that register a custom menu
+function register_custom_products_menu() {
+    register_nav_menu('product-menu',__( 'product-menu' ));
+}
+add_action( 'init', 'product-menu' );
+
+//Removes woocommerce css
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
+add_filter( 'nav_menu_meta_box_object', 'disable_pagination_in_menu_meta_box', 9 );

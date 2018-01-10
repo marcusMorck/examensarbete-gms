@@ -1,5 +1,85 @@
 header{
-  height: 400px;
   width: 100%;
-  background-color: black;
+  height: 200px;
+  .logo{
+    float: left;
+  }
+  .search-bar{
+    float: left;
+  }
+  .shopping-cart{
+    float: left;
+  }
 }
+
+
+
+
+
+/*header{
+  display: flex;
+  justify-content: center;
+  .header-content{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+*/
+/*header{
+  display: flex;
+  justify-content: center;
+  .header-content{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .logo{
+      flex: 1;
+    }
+    .search-bar{
+      flex: 2;
+    }
+    .shopping-cart{
+      flex: 1;
+    }
+  }
+}*/
+/*header{
+  height: 200px;
+  width: 100%;
+
+  nav{
+    .menu-product-menu-container{
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+    }
+
+   /* ul{
+      margin: 0;
+      padding: 0;
+    }
+    li{
+      float: left;
+    }
+    a{
+      text-decoration: none;
+    }*/
+/*
+  }
+  .logo{
+    float: left;
+  }
+  .search-bar{
+    float: left;
+  }
+}
+*/
