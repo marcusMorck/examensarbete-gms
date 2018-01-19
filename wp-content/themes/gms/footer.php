@@ -6,10 +6,14 @@
                         <i class="fa fa-youtube-square fa-3x" aria-hidden="true"></i>
                         <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
                     </div>
-                <div class="copyright">
-                    <p>&copy;<?php echo date("Y") . ' '; ?>GMS AB. All rights reserved.</p>
+                    <div class="footer-copyright">
+
+                        <p>&copy;<?php echo date('Y');?> GMS. All Rights Reserved.</p>
+
+
+
+                    </div>
                 </div>
-            </div>
             </footer>
             <?php wp_footer(); ?>
         </div>

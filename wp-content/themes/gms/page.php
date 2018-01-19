@@ -1,67 +1,66 @@
 <?php
 
 get_header(); ?>
-
-<div class="content">
-    <div class="sidebar">
-        <div class="sidebar-title">
-            Alla kategorier
-        </div>
-        <nav>
-            <?php wp_nav_menu( array( 'product-menu' => 'product-menu' ) ); ?>
-        </nav>
-    </div>
-    <main>
-        this is main
-    </main>
-</div>
-<!--<main>
-    <article>Article</article>
-    <nav>Nav</nav>
-    <aside>Aside</aside>
-</main>
-
--->
-
-
-<!--
-<div class="content">
-<div class="sidebar">
-    <nav>
-
-        <?php wp_nav_menu( array( 'product-menu' => 'product-menu' ) ); ?>
-    </nav>
-</div>
 <main>
-    <?php
+    <div class="main-content">
+        <div class="content">
+            <div class="sidebar">
+                <div class="sidebar-title">
+                    Alla kategorier
+                </div>
+                <nav>
+                    <?php wp_nav_menu(array('product-menu' => 'product-menu')); ?>
+                </nav>
+            </div>
+            <main>
+                <div class="reklam">
+                    <?php while (have_posts()) : the_post(); ?>
 
-    //while ( have_posts() ) : the_post();
-    //endwhile;
-    $orderby = 'name';
-    $order = 'asc';
-    $hide_empty = false ;
-    $cat_args = array(
-        'orderby'    => $orderby,
-        'order'      => $order,
-        'hide_empty' => $hide_empty,
-    );
-    ?>
+                        <div class="entry-content">
+                            <?php
+                            the_content();
 
-    <?php
-    $product_categories = get_terms( 'product_cat', $cat_args );
+                            wp_link_pages(array(
+                                'before' => '<div class="page-links">' . __('Pages:', 'twentyseventeen'),
+                                'after' => '</div>',
+                            ));
+                            ?>
+                        </div><!-- .entry-content -->
+                    <?php endwhile; // End of the loop. ?>
+                    <?php
 
-    if( !empty($product_categories) ){
-        ?>
-        <?php
-        foreach ($product_categories as $key => $category) {
-            echo $category->name;
+                    //while ( have_posts() ) : the_post();
+                    //endwhile;
+                    $orderby = 'name';
+                    $order = 'asc';
+                    $hide_empty = false;
+                    $cat_args = array(
+                        'orderby' => $orderby,
+                        'order' => $order,
+                        'hide_empty' => $hide_empty,
+                    );
+                    ?>
 
-        }
-    }
+                    <?php
+                    $product_categories = get_terms('product_cat', $cat_args);
 
-    wc_get_template( 'single-product/title.php' );
+                    if (!empty($product_categories)) {
+                        ?>
+                        <?php
+                        foreach ($product_categories as $key => $category) {
+                            echo $category->name;
 
-    ?>
+                        }
+                    }
+
+                    //wc_get_template( 'single-product/title.php' );
+
+                    ?>
+
+                </div>
+            </main>
+        </div>
+    </div>
 </main>
 <!--
     <div class="content">
@@ -95,11 +94,10 @@ get_header(); ?>
 
             wc_get_template( 'single-product/title.php' );
 */
-            ?>
+?>
         </main>
     </div>
 </div>-->
-
 
 
 <?php get_footer(); ?>
