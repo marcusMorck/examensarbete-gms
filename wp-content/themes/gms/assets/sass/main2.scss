@@ -1,0 +1,132 @@
+@import 'partials/header';
+@import "partials/aside";
+
+/*body, html{
+  margin: 0;
+  padding: 0;
+  background-color: #00AADC;
+
+}
+.wrapper{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  background-color: #FFFFFF;
+  width: 100%;
+  box-shadow: 0 0 8px #000;
+}
+.header-content{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  .logo{
+    width: 20%;
+  }
+  .search-bar{
+    width: 60%;
+  }
+  .shopping-cart{
+    width: 20%;
+  }
+}
+.content{
+  width: 1280px;
+  display: flex;
+
+  main{
+    display: flex;
+    justify-content: center;
+    width: 84.6%;
+
+  }
+
+}
+.search-bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .woocommerce-product-search{
+    .search-field{
+      width: 500px;
+      height: 35px;
+    }
+    input[type="submit"]{
+      width: 40px;
+      height: 35px;
+    }
+  }
+
+}
+.shopping-cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar{
+  flex: 1;   
+  background-color: #FFFFFF;
+  width: 12%;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  .sidebar-title{
+    text-align: center;
+    background-color: darkgray;
+    padding: 15px 0 15px 0;
+
+  }
+  .menu-product-menu-container{
+    ul{
+      margin: 0;
+      padding: 0;
+      li{
+
+        list-style-type: none;
+        a{
+          color: #000000;
+          text-decoration: none;
+
+          display: block;
+          padding: 15px;
+
+        }
+        a:hover{
+          color: #b30000;
+        }
+      }
+    }
+  }
+}
+
+
+footer{
+  border-top: 5px solid #b30000;
+  width: 100%;
+  .footer-social{
+    background-color: #e6f5ff;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    i{
+      padding: 10px;
+    }
+  }
+  .footer-copyright{
+    color: #ffffff;
+    background-color: #005c99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+.reklam{
+  width: 95%;
+  height: 200px;
+  background-color: gainsboro;
+}
+
+/*

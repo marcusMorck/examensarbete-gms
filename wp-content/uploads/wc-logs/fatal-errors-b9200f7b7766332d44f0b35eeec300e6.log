@@ -1,0 +1,12 @@
+2018-01-12T12:20:52+00:00 CRITICAL Uncaught Error: Call to undefined function woocommerce_widget_shopping_cart_buttons() in /Applications/MAMP/htdocs/examensarbete-gms/wp-content/themes/gms/header.php:11
+Stack trace:
+#0 /Applications/MAMP/htdocs/examensarbete-gms/wp-includes/template.php(688): require_once()
+#1 /Applications/MAMP/htdocs/examensarbete-gms/wp-includes/template.php(647): load_template('/Applications/M...', true)
+#2 /Applications/MAMP/htdocs/examensarbete-gms/wp-includes/general-template.php(41): locate_template(Array, true)
+#3 /Applications/MAMP/htdocs/examensarbete-gms/wp-content/themes/gms/page.php(3): get_header()
+#4 /Applications/MAMP/htdocs/examensarbete-gms/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/htdocs/examensarbete-gms/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/htdocs/examensarbete-gms/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
