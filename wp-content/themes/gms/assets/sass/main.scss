@@ -1,98 +1,63 @@
 @import 'partials/header';
 @import "partials/aside";
 
-* {
-  box-sizing: border-box;
-}
-
-body, html{
+html, body{
   margin: 0;
   padding: 0;
-  background-color: #00AADC;
-
 }
-
+*{
+  box-sizing: border-box;
+}
 header{
-  width: 100%;
-  position: relative;
-  z-index: 150;
-  display: flex;
-  background-color: #FFFFFF;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-footer {
-  margin-top: 20px;
-  width: 100%;
-  background-color: #FFFFFF;
   display: flex;
   justify-content: center;
-  .footer-social {
-    background-color: #e6f5ff;
+  width: 100%;
+  .responsive-menu{
+    padding: 15px;
+    flex: 1 0 auto;
     display: flex;
-    height: 100px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    i {
-      padding: 10px;
+    .logo{
+      //flex-grow: 3;
+      display: flex;
+      justify-content: center;
+      width: 50%;
+    }
+    .hamburger-menu{
+      width: 20%;
+      flex-grow: 1;
+    }
+    .shopping-cart{
+      flex-grow: 1;
+    }
+    .options{
+      flex-grow: 1;
     }
   }
-  .footer-copyright{
-    color: #ffffff;
-    background-color: #005c99;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
 }
-.content{
-  width: 1280px;
+.custom-logo{
+  height: 25px;
+  width: 100px;
 }
-main{
-  display: flex;
-  justify-content: center;
-  .main-content{
-    box-shadow: 0 0 8px #000;
-    width: 1280px;
-    background-color: #FFFFFF;
+
+@media screen and (min-width: 600px){
+  .custom-logo{
+    height: 40px;
+    width: 150px;
   }
 }
 
-.sidebar{
-  flex: 1 0 0;
-  background-color: #FFFFFF;
-  width: 15.6%;
-  border-right: 1px solid #ddd;
-  border-left: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  .sidebar-title{
-    text-align: center;
-    background-color: darkgray;
-    padding: 15px 0 15px 0;
-
+@media screen and (min-width: 900px){
+  .custom-logo{
+    height: 60px;
+    width: 200px;
   }
-  .menu-product-menu-container{
-    ul{
-      margin: 0;
-      padding: 0;
-      li{
-
-        list-style-type: none;
-        a{
-          color: #000000;
-          text-decoration: none;
-
-          display: block;
-          padding: 15px;
-
-        }
-        a:hover{
-          color: #b30000;
-        }
-      }
-    }
+  .hamburger-menu{
+    display: none;
+  }
+  .options{
+    display: none;
   }
 }
