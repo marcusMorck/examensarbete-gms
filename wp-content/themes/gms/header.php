@@ -6,6 +6,10 @@
     </head>
     <body>
         <header>
+            <div class="responsive-menu">
+                <div class="hamburger-menu">
+                    <i class="fa fa-bars fa-1x" aria-hidden="true"></i>
+                </div>
                 <div class="logo">
                     <?php
                         if ( function_exists( 'the_custom_logo' ) ) {
@@ -13,22 +17,14 @@
                         }
                     ?>
                 </div>
-                <div class="search-bar">
-                    <?php get_product_search_form();?>
-                </div>
                 <div class="shopping-cart">
-                    <?php global $woocommerce; ?>
-                    <a href="<?php echo wc_get_cart_url(); ?>">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <?php echo $woocommerce->cart->get_cart_total(); ?>
-                    <?php echo $woocommerce->cart->get_cart_contents_count(); ?>
-                    </a>
-                    <!--
-                    <a href="<?php //echo wc_get_cart_url(); ?>">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <?php //echo WC()->cart->get_cart_contents_count() ?></a>-->
+                    <i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i>
                 </div>
+                <div class="options">
+                    <i class="fa fa-ellipsis-v fa-1x" aria-hidden="true"></i>
 
+                </div>
+            </div>
         </header>
 
 

@@ -24,6 +24,7 @@ add_action('after_setup_theme', 'woocommerce_support');
 function load_styles() {
     wp_enqueue_style('style.css', get_template_directory_uri() .'/style.css');
     wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 }
 //Executes the function load_styles() and adds all of the css styles
 add_action('wp_enqueue_scripts', 'load_styles');
@@ -32,6 +33,7 @@ add_action('wp_enqueue_scripts', 'load_styles');
 function load_scripts()
 {
     wp_enqueue_script('jquery');
+    wp_enqueue_script('menu', get_template_directory_uri() . '/assets/js/menu.js', array('jquery'), '1.0.0', false);
     //wp_enqueue_script('download-files.js', get_template_directory_uri() . '/assets/js/download-files.js', array('jquery'), '1.0.0', false);
     //wp_enqueue_script('showhide.js', get_template_directory_uri() . '/assets/js/showhide.js', array('jquery'), '1.0.0', false);
 }

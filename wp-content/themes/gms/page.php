@@ -26,7 +26,7 @@ get_header(); ?>
                             ));
                             ?>
                         </div><!-- .entry-content -->
-                    <?php endwhile; // End of the loop. ?>
+                    <?php endwhile; // End of the loop. .?>
                     <?php
 
                     //while ( have_posts() ) : the_post();
