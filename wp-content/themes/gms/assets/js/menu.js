@@ -1,6 +1,8 @@
 /**
  * Created by marcus on 2018-01-22.
  */
+
+
 (function($) {
 
     /*$width = $( document ).width();
@@ -12,6 +14,7 @@
         $(".menu").show();
     }*/
 })( jQuery );
+
 
 
 jQuery( document ).ready(function( $ ) {
@@ -29,11 +32,13 @@ jQuery( document ).ready(function( $ ) {
         $('.sidebar').hide();
         $(".menu").hide();
     }
+     */
+
 
     $('.fa-bars').on('click', function() {
        $('.sidebar').toggle();
        $('.menu').toggle();
-    })
+    });
 
-*/
+
 });
