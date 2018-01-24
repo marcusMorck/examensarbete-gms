@@ -10,3 +10,11 @@ Stack trace:
 #7 {main}
   thrown
 
+2018-01-22T22:26:56+00:00 CRITICAL Uncaught Error: Call to a member function get_name() on null in /Applications/MAMP/htdocs/examensarbete-gms/wp-content/themes/gms/varukorg-template.php:14
+Stack trace:
+#0 /Applications/MAMP/htdocs/examensarbete-gms/wp-includes/template-loader.php(74): include()
+#1 /Applications/MAMP/htdocs/examensarbete-gms/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/examensarbete-gms/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown
+
